@@ -1,38 +1,34 @@
 # Finds amino acid based on 1-letter, 3-letter or name
-import random
+from random import randint
+import csv
 
-# groups
-oneLetter = ['A', 'R', 'D', 'N', 'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S',
-             'T', 'W', 'Y', ' V']
-threeLetter = ['Ala', 'Arg', 'Asp', 'Asn', 'Cys', 'Glu', 'Gln', 'Gly', 'His', 'Ile', 'Leu',
-               'Lys', 'Met', 'Phe', 'Pro', 'Ser', 'Thr', 'Trp', 'Tyr', 'Val']
-name = ['Alanine', 'Arginine', 'Aspartic Acid', 'Asparagine', 'Cystine', 'Glutamic acid',
-        'Glutamine', 'Glycine', 'Histidine', 'Isoleucine', 'Leucine', 'Lysine', 'Methyonine',
-        'Phenylalanine', 'Proline', 'Serine', 'Threonine', 'Tryptophan', 'Tyrosin', 'Valine']
+amino_list = []
 
-# group in list
-group = [oneLetter, threeLetter, name]
-groupName = ['1-letter code', '3-letter code', 'name']
+with open('AAKT3.csv') as infile:
+    reader = csv.reader(infile)
+    next(reader, None)  # skip the headers
+    for line in infile:
+        line = line.strip()
+        size = line.split(';')[-1]
+        amino = line.split(';')[0:3]
+        amino.append(size)
+        amino_list.append(amino)
 
-# picking group and the group element
-while True:
-    i = random.randint(0, 2)
-    j = random.randint(0, 19)
-    k = random.randint(0, 2)
-    if i != k:
-        break
+cat = ['name', 'three letter code', 'one letter code', 'size']
 
-answer = group[i][j]
-hint = group[k][j]
+i = randint(0,20)
+j = randint(0,2)
+k = randint(0,3)
 
-print(hint)
+while j == k:
+    j = randint(0,2)
 
-while True:
-    guess = input(f'Guess the {groupName[i]}: ')
+answer = amino_list[i][k]
+hint = amino_list[i][j]
 
-    if guess.upper() == answer.upper():
-        print('correct.')
-        break
+guess = input(f'{hint}\nguess the {cat[k]}: ')
+while guess.capitalize() != answer.capitalize():
+    print('wrong. try again.')
+    guess = input(f'{hint}\nguess the {cat[k]}: ')
 
-    else:
-        print('wrong. try again.')
+print('correct')

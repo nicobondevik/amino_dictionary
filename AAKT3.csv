@@ -1,0 +1,21 @@
+﻿Amino Acid;3-Letter;1-Letter;Hydrophobicity;Side-chain polarity;Side-chain charge (at pH 7.4);size (small/medium/large)
+Alanine;Ala;A;Hydrophobic;Nonpolar;Neutral;Small
+Arginine;Arg;R;Hydrophilic;Basic polar;Positive;Large
+Asparagine;Asn;N;Hydrophilic;Polar;Neutral;Medium
+Aspartic acid;Asp;D;Hydrophilic;Acidic polar;Negative;Medium
+Cysteine;Cys;C;Hydrophobic;Nonpolar;Neutral;Small
+Glutamic acid;Glu;E;Hydrophilic;Acidic polar;Negative;Large
+Glutamine;Gln;Q;Hydrophilic;Polar;Neutral;Large
+Glycine;Gly;G;Hydrophobic;Nonpolar;Neutral;Small
+Histidine;His;H;Hydrophilic;Basic polar;10% Pos, rest neutral;Large
+Isoleucine;Ile;I;Hydrophobic;Nonpolar;Neutral;Medium
+Leucine;Leu;L;Hydrophobic;Nonpolar;Neutral;Medium
+Lysine;Lys;K;Hydrophilic;Basic polar;Positive;Large
+Methionine;Met;M;Hydrophobic;Nonpolar;Neutral;Large
+Phenylalanine;Phe;F;Hydrophobic;Nonpolar;Neutral;Large
+Proline;Pro;P;Hydrophobic;Nonpolar;Neutral;Small
+Serine;Ser;S;Hydrophilic;Polar;Neutral;Small
+Threonine;Thr;T;Intermediate hydrophilic;Polar;Neutral;Small
+Tryptophan;Trp;W;Hydrophobic;Nonpolar;Neutral;Large
+Tyrosine;Tyr;Y;Intermediate hydrophobic;Nonpolar/polar;Neutral;Large
+Valine;Val;V;Hydrophobic;Nonpolar;Neutral;Small
